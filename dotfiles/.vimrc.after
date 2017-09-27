@@ -1,0 +1,82 @@
+" load yadr keymaps
+exe 'source' '~/dev/sputnik/dotfiles/NERDtree.vim'
+exe 'source' '~/dev/sputnik/dotfiles/yadr-keymap-linux.vim'
+exe 'source' '~/dev/sputnik/dotfiles/yadr-keymap.vim'
+exe 'source' '~/dev/sputnik/dotfiles/ctrlp.vim'
+exe 'source' '~/dev/sputnik/dotfiles/search.vim'
+exe 'source' '~/dev/sputnik/dotfiles/tComment.vim'
+exe 'source' '~/dev/sputnik/dotfiles/vim-session.vim'
+
+:set tabstop=2      " To match the sample file
+:set noexpandtab    " Use tabs, not spaces
+
+hi Visual term=reverse cterm=reverse guibg=Grey
+
+let g:session_autosave = 'yes'
+let g:session_autosave_periodic = 1
+
+" Set the nerdtreee size laarger
+let g:NERDTreeWinSize=45
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+let g:jsx_ext_required = 0
+let g:syntastic_javascript_checkers = ['eslint']
+
+let g:syntastic_javascript_eslint_exec="eslint"
+
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = {
+			\ "mode": "active",
+			\ "active_filetypes": ["javascript.jsx", "javascript"],
+			\ "passive_filetypes": [] }
+
+if has('nvim')
+	tnoremap <Esc> <C-\><C-n>
+endif
+
+" :DeopleteEnable
+let g:deoplete#enable_at_startup = 1
+
+let g:alduin_Shout_Become_Ethereal = 1
+let g:alduin_Shout_Aura_Whisper = 1
+let g:sierra_Midnight = 1
+let g:sierra_MatchParen_Underline = 1
+:colorscheme Benokai
+:set suffixesadd+=.js
+
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+let s:terminal_italic=1
+let g:jsx_ext_required = 0
+
+" Remap opening the last file
+nnoremap <C-b> <C-^>
+
+" Make background transparent
+highlight Normal guibg=none
+
+" setup prettier
+autocmd FileType javascript set formatprg=prettier\ --trailing-comma=es5\ --use-tabs\ --stdin
+" autocmd BufWritePre *.js :normal gggqG
+
+" setup flow
+" let g:flow#enable = 1
+let g:flow#autoclose = 1
+let g:vim_json_syntax_conceal = 0 " reset json.vim plugin to not hide quotes (from janus)
+let mapleader = "," " tell janus to use , as leader
+
+map <c-f> :FlowType <cr>

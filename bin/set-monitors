@@ -1,0 +1,5 @@
+#!/bin/bash
+
+xrandr --output DP-1-8 --mode 2560x1440 --crtc 1 --left-of eDP-1
+xrandr --output DP-1-1 --mode 2560x1440 --crtc 2 --left-of DP-1-8
+feh --bg-fill /home/blittle/Downloads/desert-valley-3.jpg

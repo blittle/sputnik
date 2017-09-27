@@ -1,0 +1,6 @@
+#!/usr/bin/zsh
+
+export port=$1
+export project=$2
+
+tmuxifier w ui
