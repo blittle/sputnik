@@ -1,2 +1,2 @@
 # sputnik
-Dotfiles for my machine. Uses zsh, tmux, and i3-gaps
+Dotfiles for my machine. Uses neo-vim, zsh, tmux, and i3-gaps
