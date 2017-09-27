@@ -159,7 +159,7 @@ bar {
 	status_command i3status
 	height 24
 	separator_symbol ":|:"
-	tray_output eDP1
+	tray_output eDP-1
   colors {
     separator #7d7d7d
     background #141414
