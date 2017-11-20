@@ -79,4 +79,7 @@ let g:flow#autoclose = 1
 let g:vim_json_syntax_conceal = 0 " reset json.vim plugin to not hide quotes (from janus)
 let mapleader = "," " tell janus to use , as leader
 
+" fugitive-gitlab config
+let g:fugitive_gitlab_domains = ['https://canopy.githost.io']
+
 map <c-f> :FlowType <cr>

@@ -29,7 +29,8 @@
 
   "globals": {
 		"global": true,
-		"window": true
+		"window": true,
+		"SystemJS": true,
   },
 
   "plugins": [
