@@ -1,3 +1,8 @@
+nnoremap <S-J> <C-W><C-J>
+nnoremap <S-K> <C-W><C-K>
+nnoremap <S-L> <C-W><C-L>
+nnoremap <S-H> <C-W><C-H>
+
 " load yadr keymaps
 exe 'source' '~/dev/sputnik/dotfiles/NERDtree.vim'
 exe 'source' '~/dev/sputnik/dotfiles/yadr-keymap-linux.vim'
@@ -8,7 +13,7 @@ exe 'source' '~/dev/sputnik/dotfiles/tComment.vim'
 exe 'source' '~/dev/sputnik/dotfiles/vim-session.vim'
 
 :set tabstop=2      " To match the sample file
-:set noexpandtab    " Use tabs, not spaces
+" :set noexpandtab    " Use tabs, not spaces
 
 hi Visual term=reverse cterm=reverse guibg=Grey
 
@@ -70,7 +75,7 @@ nnoremap <C-b> <C-^>
 highlight Normal guibg=none
 
 " setup prettier
-autocmd FileType javascript set formatprg=prettier\ --trailing-comma=es5\ --use-tabs\ --stdin
+autocmd FileType javascript set formatprg=prettier\ --trailing-comma=es5\ --stdin
 " autocmd BufWritePre *.js :normal gggqG
 
 " setup flow
