@@ -103,7 +103,8 @@
 [merge]
   summary = true
   verbosity = 1
-  tool = mvimdiff
+  conflictstyle = diff3
+  tool = vimdiff
 [apply]
   whitespace = nowarn
 [branch]
